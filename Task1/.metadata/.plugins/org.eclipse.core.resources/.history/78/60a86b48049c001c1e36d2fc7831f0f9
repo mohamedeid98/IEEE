@@ -1,0 +1,54 @@
+/*
+ * problem5.c
+ *
+ *  Created on: Mar 4, 2022
+ *      Author: mohamed
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int squar_root(int number)
+{
+	int start = 0 , end = number;
+	int ans, mid;
+	while (start <= end) {
+
+
+		mid = (start + end) / 2;
+
+
+
+		if (mid * mid == number) {
+			ans = mid;
+			break;
+		}
+
+
+
+		if (mid * mid < number) {
+
+			ans=start;
+
+
+			start = mid + 1;
+		}
+
+
+
+		else {
+			end = mid - 1;
+		}
+	}
+	return ans;
+}
+
+
+int main()
+{
+
+	printf("%d", squar_root(16));
+
+	return 0;
+}

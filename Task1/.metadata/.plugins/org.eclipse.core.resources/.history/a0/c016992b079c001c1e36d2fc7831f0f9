@@ -1,0 +1,36 @@
+/*
+ * problem6.c
+ *
+ *  Created on: Mar 4, 2022
+ *      Author: mohamed
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+char num_words[][9] = {"one", "two", "three", "four", "five", "six" , "seven", "eight", "nine"};
+
+void num2word(int N)
+{
+	int dig;
+
+
+	    if (N == 0) {
+	        return;
+	    }
+
+	    dig = N % 10;
+
+
+	    num2word(N / 10);
+
+	    printf("%s ", num_words[dig-1]);
+}
+
+int main()
+{
+
+	num2word(123);
+	return 0;
+}

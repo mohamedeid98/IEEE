@@ -1,0 +1,42 @@
+/*
+ * problem7.c
+ *
+ *  Created on: Mar 5, 2022
+ *      Author: mohamed
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main()
+{
+	float a, b, c;
+	float  root1, root2;
+	int check;
+	printf("Enter values of a, b, c of quadratic (aX^2 + bX + c): ");
+	fflush(stdout);
+	scanf("%f%f%f", &a, &b, &c);
+
+	check = ((b*b) - (4 * a * c)) >= 0;
+
+	switch(check)
+	{
+		case 1:
+			root1 = (-b + sqrt((b*b) - (4 * a * c))) / 2 * a;
+			root2 = (-b - sqrt((b*b) - (4 * a * c))) / 2 * a;
+			printf("real roots are %f, %f", root1, root2);
+			break;
+		case 0:
+			root1 = (-b + sqrt(abs((b*b) - (4 * a * c)))) / 2 * a;
+			root2 = (-b - sqrt(abs((b*b) - (4 * a * c)))) / 2 * a;
+			printf("complex roots are %fi, %fi", root1, root2);
+			break;
+	}
+
+
+
+	return 0;
+}

@@ -1,0 +1,41 @@
+/*
+ * problem9.c
+ *
+ *  Created on: Mar 5, 2022
+ *      Author: mohamed
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX 100
+
+struct DOB
+{
+	char month;
+	int day;
+	int year;
+};
+
+struct data
+{
+	char name[MAX];
+	struct DOB dob;
+	long num;
+
+};
+
+
+int main()
+{
+	struct data obj;
+	obj = {"mohamed", "jan", 1, 2000, 01142600910};
+
+
+
+
+
+	return 0;
+
+}

@@ -1,0 +1,22 @@
+/*
+ * problem6.c
+ *
+ *  Created on: Mar 4, 2022
+ *      Author: mohamed
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX 100
+
+char num_words[][9] = {"one", "two", "three", "four", "five", "six" , "seven", "eight", "nine"};
+
+
+int main()
+{
+
+	printf("%s", num_words[0]);
+
+	return 0;
+}
